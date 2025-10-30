@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  overflow: hidden;
+  background-image: url(./5c8c82514e990b3601b6d0e671458fa8.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  animation-name: change-color;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes change-color {
+  from {
+    background-color: yellow;
+  }
+
+  to {
+    background-color: red;
+    transform: translate(1340px);
+  }
+}
+
+.box2 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  animation: animation2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+}
+
+@keyframes animation2 {
+  0% {
+    background-color: blue;
+    top: 0px;
+    left: 0px;
+    scale: 1.1;
+  }
+
+  24.9% {
+    background-color: blue;
+    top: 0px;
+    left: 0px;
+    scale: 1.1;
+  }
+
+  25% {
+    background-color: red;
+    top: 0;
+    left: 200px;
+    scale: 1.5;
+    border-radius: 50%;
+  }
+
+  49.9% {
+    background-color: red;
+    top: 0;
+    left: 200px;
+    scale: 1.5;
+    border-radius: 50%;
+  }
+
+  50% {
+    background-color: aqua;
+    top: 500px;
+    left: 500px;
+    scale: 2;
+    border-radius: 0%;
+  }
+
+  74.9% {
+    background-color: aqua;
+    top: 500px;
+    left: 500px;
+    scale: 2;
+  }
+
+  75% {
+    background-color: brown;
+    top: 600px;
+    left: 0;
+    scale: 3;
+  }
+
+  99.9% {
+    background-color: brown;
+    top: 600px;
+    left: 0;
+    scale: 3;
+  }
+
+  100% {
+    background-color: red;
+    top: 0;
+    left: 0;
+    scale: 4;
+  }
+}
+
+video {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  animation: circle;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+}
+
+@keyframes circle {
+    0% {
+        top: 0;
+        left: 0;
+        
+    }
+
+    25% {
+        top: 0;
+        left: calc(100% - 210px);
+        rotate: 1turn;
+    }
+
+    50% {
+        top: calc(100% - 210px);
+        left: calc(100% - 210px);
+        rotate: 2turn;
+    }
+
+    75% {
+        top: calc(100% - 210px);
+        left: 0;
+        rotate: 4turn;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+        rotate: 6turn;
+    }
+}
+
+.shape {
+    width: 200px;
+    height: 200px;
+    background-color: teal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: shapes;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+   
+}
+
+@keyframes shapes {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    10% {
+        clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+        background-color: red;
+    }
+
+    20% {
+        clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    background-color: purple;
+    }
+
+    30% {
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        background-color: blue;
+    }
+
+    40% {
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+   background-color: cyan;
+    }
+
+    50% {
+        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+   background-color: yellow;
+    }
+
+    60% {
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background-color: green;
+    }
+
+    70% {
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+   background-color: violet;
+    }
+
+    80% {
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    background-color: chocolate;
+    }
+
+    90% {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: wheat;
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background-color: beige;
+    }
+}
+
+#boy {
+    position: absolute;
+    width: 700px;
+    bottom: 0;
+ animation: walk;
+ animation-duration: 10s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+    transform: translate(-40%, 30%);
+
+    &:hover {
+        animation-play-state: paused !important;
+    }
+}
+
+div {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.trees {
+    width: 300px;
+    position: relative;
+    
+
+}
+
+.front {
+    bottom: 0;
+}
+
+.behind {
+    position: relative;
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+    bottom: -30px !important;
+}
+
+@keyframes walk {
+    100% {
+        translate: 300%;
+    }
+}
